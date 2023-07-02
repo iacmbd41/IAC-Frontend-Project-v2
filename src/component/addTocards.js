@@ -14,32 +14,21 @@ import {
   MDBTypography,
 } from "mdb-react-ui-kit";
 
-const AddPlist =[
-    {
-        id:1,
-        name: 'Samsung Galaxy M11 64GB',
-        price: 20000,
-        img: '/13.png',
-        desc: 'This very good product'
-     },
-    {
-        id:2,
-        name: 'Headphones Bose 35',
-        price: 4000,
-        img: '/6.png',
-        desc: 'Roleg-99, made in japan'
-    },
-    {
-        id:3,
-        name: 'iPad mini',
-        price: 120000,
-        img: '/1.png',
-        desc: 'This very good product'
-    }
-];
+
 const AddtoCard = () =>{
     const [pmVal, setCount] = useState(1);
     const [total, settotal] = useState(1);
+    let AddPlist = sessionStorage.getItem('checkoutItems');
+        if (!AddPlist) {
+            AddPlist = [];
+        } else {
+            try {
+                AddPlist = JSON.parse(AddPlist);
+            } catch (error) {
+            console.error('Invalid JSON data in sessionStorage: ', error);
+            AddPlist = [];
+            }
+        }
     const handlePrice = ()=>{
         settotal(total);
     }
@@ -51,10 +40,6 @@ const AddtoCard = () =>{
         setCount(pmVal+1);
         settotal(pmVal*total);
      }
-     
-     console.log(total);
-
-   
 
     return(
         <section className="h-100" style={{ backgroundColor: "#eee" }}>
@@ -75,7 +60,7 @@ const AddtoCard = () =>{
                             return (<div className="d-flex align-items-center mb-5">
                             <div className="flex-shrink-0">
                                 <MDBCardImage
-                                src={ele.img}
+                                src={ele.imgLink}
                                 fluid
                                 style={{ width: "150px" }}
                                 alt="p-image"/>

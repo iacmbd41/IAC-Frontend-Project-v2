@@ -22,7 +22,7 @@ export default function LogReg() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     await fetch( 
-      `http://localhost:7070/api/auth/signin`, 
+      `https://harunor-rashid-openshop-backend-v2.onrender.com/api/auth/signin`, 
       {
       method: "POST",
       headers: {
@@ -34,9 +34,9 @@ export default function LogReg() {
     })
     .then(response => { return response.json();})
     .then(responseData => {
-      if(responseData.message === 'success') {
-       // alert('Success to login')
+      if(responseData.message === 'Login Successfully') {
         alert(responseData.message)
+        window.location.replace('/Dashboard');
       } else {
         alert(responseData.message)
       }

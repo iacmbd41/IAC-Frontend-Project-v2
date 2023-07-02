@@ -10,7 +10,7 @@ import { useState, useEffect } from 'react';
 const OferProductList = () =>{
     const [prodData, setProdData] = useState([])
     const fetchProductInfo = () => { 
-        return fetch('http://localhost:7070') 
+        return fetch(`https://harunor-rashid-openshop-backend-v2.onrender.com`) 
         .then((responseData) => responseData.json()) 
         .then((jsonData) => setProdData(jsonData)) 
     }

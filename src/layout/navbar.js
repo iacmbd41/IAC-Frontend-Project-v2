@@ -29,9 +29,6 @@ const NavBar = () =>{
                 </Navbar>
             </Row>
             <br/>
-            {/* <button onClick={handleClick}>
-                Click Me
-            </button> */}
         </Container>
         
     )     

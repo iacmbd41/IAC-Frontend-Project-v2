@@ -1,6 +1,7 @@
 # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Author : Md. Harun or Rashid
+# 03-07-2023
+This project was bootstrapped with [Create React App](https://github.com/open-shop).
 
 ## Available Scripts
 

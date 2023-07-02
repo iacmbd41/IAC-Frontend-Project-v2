@@ -20,7 +20,7 @@ const AddtoCard = () =>{
     const params = useParams();
     const [adcrdItem, setAddcrdItem] = useState([])
     const fetchCardInfo = () => { 
-    return fetch(`http://localhost:7070/product/${params.id}`) 
+    return fetch(`https://harunor-rashid-openshop-backend-v2.onrender.com/${params.id}`) 
             .then((responseData) => responseData.json()) 
             .then((jsonData) => setAddcrdItem(jsonData)) 
     }
@@ -36,7 +36,6 @@ const AddtoCard = () =>{
     useEffect(() => {
         prePrice();
     }, [])
-    //console.log(prePrice);
     const [pmVal, setCount] = useState(1);
     const [total, setTotal] = useState(prevprice);
    

@@ -16,7 +16,7 @@ const Footer = () =>{
                         <Button size="small"><FaTwitter/></Button>
                     </ButtonGroup>
                 </Col>
-                <Col sm={6}>Copyright @ 2023 Open-Shop</Col>
+                <Col sm={6}>Copyright @ 2023 Open-Shop(Md. Harunor Rashid)</Col>
                 <Col sm={3}></Col>
             </Row>
         </Container>

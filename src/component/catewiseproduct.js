@@ -57,9 +57,7 @@ const CateProductList = () =>{
     useEffect(()=>{
         console.log(`this ${tval} is test ${count}`);
     },[count])
-    // const handleClick = () =>{
-    //     lock('./productDetails')
-    // }
+
     return (
     <Container>
         <Row xs={2} md={3} lg={4} className="g-4">

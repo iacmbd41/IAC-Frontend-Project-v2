@@ -10,7 +10,7 @@ const ProductDc = () =>{;
     const params = useParams();
     const [item, setItem] = useState([])
     const fetchProductdetInfo = () => { 
-    return fetch(`http://localhost:7070/product/${params.id}`) 
+    return fetch(`https://harunor-rashid-openshop-backend-v2.onrender.com/product/${params.id}`) 
             .then((responseData) => responseData.json()) 
             .then((jsonData) => setItem(jsonData)) 
     }

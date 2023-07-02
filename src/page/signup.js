@@ -21,7 +21,7 @@ function Signup() {
    const handleSubmit = async (event) => {
     event.preventDefault();
     await fetch(
-      `http://localhost:7070/api/auth/signup`, 
+      `https://harunor-rashid-openshop-backend-v2.onrender.com/api/auth/signup`, 
       {
       method: "POST",
       headers: {
@@ -33,18 +33,15 @@ function Signup() {
     })
     .then(response => { return response.json();})
     .then(responseData => {
-      if(responseData.message === 'success') {
-       // const email = sessionStorage.setEmail("email", responseData.email);
-       // alert('Successfully Registration');
+      if(responseData.message === 'Registration Successfully Completed') {
         alert(responseData.message)
+        window.location.replace('/loginreg');
       } else {
         alert(responseData.message)
       }
     })
-
    }
   
-
   return (
     <ThemeProvider theme={defaultTheme}>
       <Container component="main" maxWidth="xs">

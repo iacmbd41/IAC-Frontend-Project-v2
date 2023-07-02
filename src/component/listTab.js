@@ -51,7 +51,6 @@ export default function ListTabs() {
   const Onhandleobj = (acount) => {
     setDataFromChild(acount);
   };
- // console.log(data);
  
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {

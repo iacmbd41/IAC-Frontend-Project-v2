@@ -14,8 +14,7 @@ import Signup from "./page/signup";
 import CatelistTab from "./component/catelistTab";
 import Slider from "./layout/slider";
 import ForgotPass from "./page/forgatePass";
-import ParentComponent from "./page/parentpage";
-import ChildComponent from "./page/chieldpage";
+import Dashboard from "./page/dashboard";
 const RouteComponent = () =>{
     return(
         <div>
@@ -36,8 +35,7 @@ const RouteComponent = () =>{
                 <Route path='/CatelistTab' element={<CatelistTab/>}/>
                 <Route path='/Slider' element={<Slider/>}/>
                 <Route path='/ForgotPass' element={<ForgotPass/>}/>
-                <Route path='/ParentComponent' element={<ParentComponent/>}/>
-                <Route path='/ChildComponent' element={<ChildComponent/>}/>
+                <Route path='/Dashboard' element={<Dashboard/>}/>
             </Routes>
         </div>
     )

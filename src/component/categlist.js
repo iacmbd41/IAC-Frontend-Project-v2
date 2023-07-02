@@ -5,11 +5,10 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-
 const CategoryList = () => {
   const [prodCateData, setProdCateData] = useState([])
     const fetchProCategoryInfo = () => { 
-        return fetch('http://localhost:7070/productcategory') 
+        return fetch(`https://harunor-rashid-openshop-backend-v2.onrender.com/productcategory`) 
           .then((responseData) => responseData.json()) 
           .then((jsonData) => setProdCateData(jsonData)) 
     }
@@ -17,8 +16,6 @@ const CategoryList = () => {
     useEffect(() => {
       fetchProCategoryInfo();
     }, [])
-console.log(prodCateData);
-
   return (
     <Tab.Container id="list-group-tabs-example" defaultActiveKey="#link1">
       <Row>
